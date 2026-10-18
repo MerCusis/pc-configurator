@@ -1,0 +1,68 @@
+### Файл настройки и ручной проверки API (VS Code + расширение REST Client)
+### Меняйте переменные ниже, затем жмите "Send Request" над нужным запросом.
+@baseUrl = http://localhost:8000/api/v1
+# Вставьте сюда anon_token из ответа "Создать сессию"
+@token = PASTE_TOKEN_HERE
+@buildId = PASTE_BUILD_ID
+@slug = PASTE_SLUG
+
+### Проверка, что API живо
+GET {{baseUrl}}/health
+
+### Создать сессию (получить токен)
+POST {{baseUrl}}/session
+
+### Текущая сессия
+GET {{baseUrl}}/session
+Authorization: Bearer {{token}}
+
+### Категории
+GET {{baseUrl}}/categories
+
+### Производители в категории
+GET {{baseUrl}}/manufacturers?category=cpu
+
+### Каталог с фильтрами
+GET {{baseUrl}}/parts?category=cpu&socket=AM5&has_price=true&sort=price&limit=20&offset=0
+
+### Деталь по id
+GET {{baseUrl}}/parts/1
+
+### Проверка совместимости без сохранения
+POST {{baseUrl}}/compatibility/check
+Content-Type: application/json
+
+{"items": [{"part_id": 1, "quantity": 1}, {"part_id": 2, "quantity": 1}]}
+
+### Мои сборки
+GET {{baseUrl}}/builds
+Authorization: Bearer {{token}}
+
+### Создать сборку
+POST {{baseUrl}}/builds
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{"name": "Игровой ПК", "description": "тест", "items": [{"part_id": 1, "quantity": 1}]}
+
+### Изменить сборку
+PUT {{baseUrl}}/builds/{{buildId}}
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{"name": "Игровой ПК v2", "items": [{"part_id": 1, "quantity": 1}]}
+
+### Открыть публичную ссылку
+POST {{baseUrl}}/builds/{{buildId}}/share
+Authorization: Bearer {{token}}
+
+### Публичная сборка по slug
+GET {{baseUrl}}/shared/{{slug}}
+
+### Закрыть публичную ссылку
+DELETE {{baseUrl}}/builds/{{buildId}}/share
+Authorization: Bearer {{token}}
+
+### Удалить сборку
+DELETE {{baseUrl}}/builds/{{buildId}}
+Authorization: Bearer {{token}}

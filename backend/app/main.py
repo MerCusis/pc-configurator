@@ -12,6 +12,8 @@ from app.config import get_settings
 from app.database import check_db, engine
 from app.redis_client import check_redis, redis_client
 
+from app.openapi_patch import apply_openapi_patch
+
 settings = get_settings()
 API = settings.api_prefix
 VERSION = "0.1.0"
@@ -62,3 +64,5 @@ async def readiness() -> JSONResponse:
 
 for _router in (sessions.router, catalog.router, builds.router):
     app.include_router(_router, prefix=API)
+
+apply_openapi_patch(app)
