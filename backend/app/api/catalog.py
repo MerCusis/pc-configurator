@@ -2,7 +2,7 @@
 from decimal import Decimal
 from typing import Literal
 
-from fastapi import APIRouter, Depends, Query
+from fastapi import APIRouter, Depends, Path, Query
 from sqlalchemy import and_, func, or_, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -108,7 +108,7 @@ async def list_parts(
 
 
 @router.get("/parts/{part_id}")
-async def get_part(part_id: int, db: AsyncSession = Depends(get_db)):
+async def get_part(part_id: int = Path(gt=0, lt=2**63), db: AsyncSession = Depends(get_db)):
     row = (await db.execute(_base_query().where(Part.id == part_id))).first()
     if row is None:
         raise api_error(404, "part_not_found", "Деталь не найдена")

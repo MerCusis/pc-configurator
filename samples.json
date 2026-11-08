@@ -1,0 +1,958 @@
+{
+    "health/live":  {
+                        "status":  "alive"
+                    },
+    "health":  {
+                   "status":  "ok",
+                   "db":  true,
+                   "redis":  true,
+                   "version":  "0.1.0"
+               },
+    "POST session":  {
+                         "anon_token":  "dewo9SoItsJdUk4TO9PkFfVVIl1D2yiHsDVqx3Zx9Yo",
+                         "token_type":  "bearer",
+                         "expires_at":  "2027-04-23T11:32:48.786343+00:00",
+                         "builds_limit":  15
+                     },
+    "GET session":  {
+                        "expires_at":  "2027-04-23T11:32:48.786343+00:00",
+                        "builds_count":  0,
+                        "builds_limit":  15
+                    },
+    "categories":  [
+                       {
+                           "slug":  "cpu",
+                           "name":  "Процессоры",
+                           "is_required":  true,
+                           "max_items":  1,
+                           "part_count":  5
+                       },
+                       {
+                           "slug":  "motherboard",
+                           "name":  "Материнские платы",
+                           "is_required":  true,
+                           "max_items":  1,
+                           "part_count":  5
+                       },
+                       {
+                           "slug":  "ram",
+                           "name":  "Оперативная память",
+                           "is_required":  true,
+                           "max_items":  4,
+                           "part_count":  4
+                       },
+                       {
+                           "slug":  "gpu",
+                           "name":  "Видеокарты",
+                           "is_required":  false,
+                           "max_items":  1,
+                           "part_count":  4
+                       },
+                       {
+                           "slug":  "storage",
+                           "name":  "Накопители",
+                           "is_required":  true,
+                           "max_items":  8,
+                           "part_count":  4
+                       },
+                       {
+                           "slug":  "psu",
+                           "name":  "Блоки питания",
+                           "is_required":  true,
+                           "max_items":  1,
+                           "part_count":  4
+                       },
+                       {
+                           "slug":  "case",
+                           "name":  "Корпуса",
+                           "is_required":  true,
+                           "max_items":  1,
+                           "part_count":  4
+                       },
+                       {
+                           "slug":  "cooler",
+                           "name":  "Охлаждение процессора",
+                           "is_required":  false,
+                           "max_items":  1,
+                           "part_count":  3
+                       }
+                   ],
+    "manufacturers":  [
+                          {
+                              "slug":  "amd",
+                              "name":  "AMD",
+                              "part_count":  3
+                          },
+                          {
+                              "slug":  "asrock",
+                              "name":  "ASRock",
+                              "part_count":  1
+                          },
+                          {
+                              "slug":  "asus",
+                              "name":  "ASUS",
+                              "part_count":  2
+                          },
+                          {
+                              "slug":  "cooler-master",
+                              "name":  "Cooler Master",
+                              "part_count":  1
+                          },
+                          {
+                              "slug":  "corsair",
+                              "name":  "Corsair",
+                              "part_count":  2
+                          },
+                          {
+                              "slug":  "deepcool",
+                              "name":  "DeepCool",
+                              "part_count":  3
+                          },
+                          {
+                              "slug":  "fractal",
+                              "name":  "Fractal Design",
+                              "part_count":  1
+                          },
+                          {
+                              "slug":  "gskill",
+                              "name":  "G.Skill",
+                              "part_count":  1
+                          },
+                          {
+                              "slug":  "gigabyte",
+                              "name":  "Gigabyte",
+                              "part_count":  1
+                          },
+                          {
+                              "slug":  "intel",
+                              "name":  "Intel",
+                              "part_count":  2
+                          },
+                          {
+                              "slug":  "kingston",
+                              "name":  "Kingston",
+                              "part_count":  4
+                          },
+                          {
+                              "slug":  "msi",
+                              "name":  "MSI",
+                              "part_count":  3
+                          },
+                          {
+                              "slug":  "noctua",
+                              "name":  "Noctua",
+                              "part_count":  2
+                          },
+                          {
+                              "slug":  "palit",
+                              "name":  "Palit",
+                              "part_count":  1
+                          },
+                          {
+                              "slug":  "samsung",
+                              "name":  "Samsung",
+                              "part_count":  2
+                          },
+                          {
+                              "slug":  "sapphire",
+                              "name":  "Sapphire",
+                              "part_count":  1
+                          },
+                          {
+                              "slug":  "seagate",
+                              "name":  "Seagate",
+                              "part_count":  1
+                          },
+                          {
+                              "slug":  "be-quiet",
+                              "name":  "be quiet!",
+                              "part_count":  2
+                          }
+                      ],
+    "parts?limit=5":  {
+                          "items":  [
+                                        {
+                                            "id":  3,
+                                            "category":  "cpu",
+                                            "name":  "AMD Ryzen 5 5600",
+                                            "manufacturer":  "AMD",
+                                            "manufacturer_display":  "AMD",
+                                            "source":  "seed",
+                                            "price":  "9990.00",
+                                            "currency":  "RUB",
+                                            "has_price":  true,
+                                            "price_display":  "9 990 ₽",
+                                            "price_is_estimate":  false,
+                                            "price_note":  null,
+                                            "price_updated_at":  "2026-10-17T11:44:22.092500+00:00",
+                                            "power_w":  88,
+                                            "power_display":  "88 Вт",
+                                            "specs":  {
+                                                          "tdp_w":  65,
+                                                          "socket":  "AM4",
+                                                          "memory_types":  [
+                                                                               "DDR4"
+                                                                           ],
+                                                          "integrated_graphics":  false
+                                                      },
+                                            "specs_display":  [
+                                                                  {
+                                                                      "key":  "socket",
+                                                                      "label":  "Сокет",
+                                                                      "value":  "AM4",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "memory_types",
+                                                                      "label":  "Типы памяти",
+                                                                      "value":  "DDR4",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "tdp_w",
+                                                                      "label":  "TDP",
+                                                                      "value":  "65 Вт",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "integrated_graphics",
+                                                                      "label":  "Встроенная графика",
+                                                                      "value":  "нет",
+                                                                      "missing":  false
+                                                                  }
+                                                              ],
+                                            "missing_specs":  [
+
+                                                              ],
+                                            "is_data_complete":  true
+                                        },
+                                        {
+                                            "id":  1,
+                                            "category":  "cpu",
+                                            "name":  "AMD Ryzen 5 7600",
+                                            "manufacturer":  "AMD",
+                                            "manufacturer_display":  "AMD",
+                                            "source":  "seed",
+                                            "price":  "17990.00",
+                                            "currency":  "RUB",
+                                            "has_price":  true,
+                                            "price_display":  "17 990 ₽",
+                                            "price_is_estimate":  false,
+                                            "price_note":  null,
+                                            "price_updated_at":  "2026-10-17T11:44:22.092500+00:00",
+                                            "power_w":  88,
+                                            "power_display":  "88 Вт",
+                                            "specs":  {
+                                                          "tdp_w":  65,
+                                                          "socket":  "AM5",
+                                                          "memory_types":  [
+                                                                               "DDR5"
+                                                                           ],
+                                                          "integrated_graphics":  true
+                                                      },
+                                            "specs_display":  [
+                                                                  {
+                                                                      "key":  "socket",
+                                                                      "label":  "Сокет",
+                                                                      "value":  "AM5",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "memory_types",
+                                                                      "label":  "Типы памяти",
+                                                                      "value":  "DDR5",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "tdp_w",
+                                                                      "label":  "TDP",
+                                                                      "value":  "65 Вт",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "integrated_graphics",
+                                                                      "label":  "Встроенная графика",
+                                                                      "value":  "есть",
+                                                                      "missing":  false
+                                                                  }
+                                                              ],
+                                            "missing_specs":  [
+
+                                                              ],
+                                            "is_data_complete":  true
+                                        },
+                                        {
+                                            "id":  2,
+                                            "category":  "cpu",
+                                            "name":  "AMD Ryzen 7 7800X3D",
+                                            "manufacturer":  "AMD",
+                                            "manufacturer_display":  "AMD",
+                                            "source":  "seed",
+                                            "price":  "39990.00",
+                                            "currency":  "RUB",
+                                            "has_price":  true,
+                                            "price_display":  "39 990 ₽",
+                                            "price_is_estimate":  false,
+                                            "price_note":  null,
+                                            "price_updated_at":  "2026-10-17T11:44:22.092500+00:00",
+                                            "power_w":  162,
+                                            "power_display":  "162 Вт",
+                                            "specs":  {
+                                                          "tdp_w":  120,
+                                                          "socket":  "AM5",
+                                                          "memory_types":  [
+                                                                               "DDR5"
+                                                                           ],
+                                                          "integrated_graphics":  true
+                                                      },
+                                            "specs_display":  [
+                                                                  {
+                                                                      "key":  "socket",
+                                                                      "label":  "Сокет",
+                                                                      "value":  "AM5",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "memory_types",
+                                                                      "label":  "Типы памяти",
+                                                                      "value":  "DDR5",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "tdp_w",
+                                                                      "label":  "TDP",
+                                                                      "value":  "120 Вт",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "integrated_graphics",
+                                                                      "label":  "Встроенная графика",
+                                                                      "value":  "есть",
+                                                                      "missing":  false
+                                                                  }
+                                                              ],
+                                            "missing_specs":  [
+
+                                                              ],
+                                            "is_data_complete":  true
+                                        },
+                                        {
+                                            "id":  7,
+                                            "category":  "motherboard",
+                                            "name":  "ASRock B650I Lightning WiFi",
+                                            "manufacturer":  "ASRock",
+                                            "manufacturer_display":  "ASRock",
+                                            "source":  "seed",
+                                            "price":  "19990.00",
+                                            "currency":  "RUB",
+                                            "has_price":  true,
+                                            "price_display":  "19 990 ₽",
+                                            "price_is_estimate":  false,
+                                            "price_note":  null,
+                                            "price_updated_at":  "2026-10-17T11:44:22.092500+00:00",
+                                            "power_w":  null,
+                                            "power_display":  "нет данных",
+                                            "specs":  {
+                                                          "socket":  "AM5",
+                                                          "m2_slots":  2,
+                                                          "sata_ports":  2,
+                                                          "form_factor":  "Mini-ITX",
+                                                          "memory_type":  "DDR5",
+                                                          "memory_slots":  2,
+                                                          "max_memory_gb":  96
+                                                      },
+                                            "specs_display":  [
+                                                                  {
+                                                                      "key":  "socket",
+                                                                      "label":  "Сокет",
+                                                                      "value":  "AM5",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "form_factor",
+                                                                      "label":  "Форм-фактор",
+                                                                      "value":  "Mini-ITX",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "memory_type",
+                                                                      "label":  "Тип памяти",
+                                                                      "value":  "DDR5",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "memory_slots",
+                                                                      "label":  "Слоты памяти",
+                                                                      "value":  "2",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "max_memory_gb",
+                                                                      "label":  "Макс. объём памяти",
+                                                                      "value":  "96 ГБ",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "m2_slots",
+                                                                      "label":  "Слоты M.2",
+                                                                      "value":  "2",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "sata_ports",
+                                                                      "label":  "Порты SATA",
+                                                                      "value":  "2",
+                                                                      "missing":  false
+                                                                  }
+                                                              ],
+                                            "missing_specs":  [
+
+                                                              ],
+                                            "is_data_complete":  true
+                                        },
+                                        {
+                                            "id":  9,
+                                            "category":  "motherboard",
+                                            "name":  "ASUS PRIME B760M-A D4",
+                                            "manufacturer":  "ASUS",
+                                            "manufacturer_display":  "ASUS",
+                                            "source":  "seed",
+                                            "price":  "12990.00",
+                                            "currency":  "RUB",
+                                            "has_price":  true,
+                                            "price_display":  "12 990 ₽",
+                                            "price_is_estimate":  false,
+                                            "price_note":  null,
+                                            "price_updated_at":  "2026-10-17T11:44:22.092500+00:00",
+                                            "power_w":  null,
+                                            "power_display":  "нет данных",
+                                            "specs":  {
+                                                          "socket":  "LGA1700",
+                                                          "m2_slots":  2,
+                                                          "sata_ports":  4,
+                                                          "form_factor":  "Micro-ATX",
+                                                          "memory_type":  "DDR4",
+                                                          "memory_slots":  4,
+                                                          "max_memory_gb":  128
+                                                      },
+                                            "specs_display":  [
+                                                                  {
+                                                                      "key":  "socket",
+                                                                      "label":  "Сокет",
+                                                                      "value":  "LGA1700",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "form_factor",
+                                                                      "label":  "Форм-фактор",
+                                                                      "value":  "Micro-ATX",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "memory_type",
+                                                                      "label":  "Тип памяти",
+                                                                      "value":  "DDR4",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "memory_slots",
+                                                                      "label":  "Слоты памяти",
+                                                                      "value":  "4",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "max_memory_gb",
+                                                                      "label":  "Макс. объём памяти",
+                                                                      "value":  "128 ГБ",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "m2_slots",
+                                                                      "label":  "Слоты M.2",
+                                                                      "value":  "2",
+                                                                      "missing":  false
+                                                                  },
+                                                                  {
+                                                                      "key":  "sata_ports",
+                                                                      "label":  "Порты SATA",
+                                                                      "value":  "4",
+                                                                      "missing":  false
+                                                                  }
+                                                              ],
+                                            "missing_specs":  [
+
+                                                              ],
+                                            "is_data_complete":  true
+                                        }
+                                    ],
+                          "total":  33,
+                          "limit":  5,
+                          "offset":  0
+                      },
+    "parts/{id}":  {
+                       "id":  3,
+                       "category":  "cpu",
+                       "name":  "AMD Ryzen 5 5600",
+                       "manufacturer":  "AMD",
+                       "manufacturer_display":  "AMD",
+                       "source":  "seed",
+                       "price":  "9990.00",
+                       "currency":  "RUB",
+                       "has_price":  true,
+                       "price_display":  "9 990 ₽",
+                       "price_is_estimate":  false,
+                       "price_note":  null,
+                       "price_updated_at":  "2026-10-17T11:44:22.092500+00:00",
+                       "power_w":  88,
+                       "power_display":  "88 Вт",
+                       "specs":  {
+                                     "tdp_w":  65,
+                                     "socket":  "AM4",
+                                     "memory_types":  [
+                                                          "DDR4"
+                                                      ],
+                                     "integrated_graphics":  false
+                                 },
+                       "specs_display":  [
+                                             {
+                                                 "key":  "socket",
+                                                 "label":  "Сокет",
+                                                 "value":  "AM4",
+                                                 "missing":  false
+                                             },
+                                             {
+                                                 "key":  "memory_types",
+                                                 "label":  "Типы памяти",
+                                                 "value":  "DDR4",
+                                                 "missing":  false
+                                             },
+                                             {
+                                                 "key":  "tdp_w",
+                                                 "label":  "TDP",
+                                                 "value":  "65 Вт",
+                                                 "missing":  false
+                                             },
+                                             {
+                                                 "key":  "integrated_graphics",
+                                                 "label":  "Встроенная графика",
+                                                 "value":  "нет",
+                                                 "missing":  false
+                                             }
+                                         ],
+                       "missing_specs":  [
+
+                                         ],
+                       "is_data_complete":  true
+                   },
+    "compatibility/check":  {
+                                "is_compatible":  true,
+                                "is_complete":  false,
+                                "error_count":  0,
+                                "warning_count":  0,
+                                "issues":  [
+
+                                           ],
+                                "power":  {
+                                              "peak_w":  138,
+                                              "recommended_w":  180,
+                                              "suggested_psu_w":  300,
+                                              "base_load_w":  50,
+                                              "factor":  1.3,
+                                              "vendor_min_w":  null,
+                                              "by_category":  {
+                                                                  "cpu":  88
+                                                              }
+                                          },
+                                "missing_categories":  [
+                                                           "motherboard",
+                                                           "ram",
+                                                           "storage",
+                                                           "psu",
+                                                           "case"
+                                                       ],
+                                "total_price":  "9990.00",
+                                "unpriced_part_ids":  [
+
+                                                      ],
+                                "total_price_display":  "9 990 ₽",
+                                "total_price_is_estimate":  false,
+                                "total_price_note":  null,
+                                "unpriced_count":  0
+                            },
+    "POST builds":  {
+                        "id":  "f64660e9-64a9-4dac-b15e-734bf9d8b9c5",
+                        "name":  "Проверка API",
+                        "description":  null,
+                        "is_public":  false,
+                        "share_slug":  null,
+                        "share_path":  null,
+                        "created_at":  "2026-10-25T11:32:49.006178+00:00",
+                        "updated_at":  "2026-10-25T11:32:49.006178+00:00",
+                        "items":  [
+                                      {
+                                          "part":  {
+                                                       "id":  3,
+                                                       "category":  "cpu",
+                                                       "name":  "AMD Ryzen 5 5600",
+                                                       "manufacturer":  "AMD",
+                                                       "manufacturer_display":  "AMD",
+                                                       "source":  "seed",
+                                                       "price":  "9990.00",
+                                                       "currency":  "RUB",
+                                                       "has_price":  true,
+                                                       "price_display":  "9 990 ₽",
+                                                       "price_is_estimate":  false,
+                                                       "price_note":  null,
+                                                       "price_updated_at":  "2026-10-17T11:44:22.092500+00:00",
+                                                       "power_w":  88,
+                                                       "power_display":  "88 Вт",
+                                                       "specs":  {
+                                                                     "tdp_w":  65,
+                                                                     "socket":  "AM4",
+                                                                     "memory_types":  [
+                                                                                          "DDR4"
+                                                                                      ],
+                                                                     "integrated_graphics":  false
+                                                                 },
+                                                       "specs_display":  [
+                                                                             {
+                                                                                 "key":  "socket",
+                                                                                 "label":  "Сокет",
+                                                                                 "value":  "AM4",
+                                                                                 "missing":  false
+                                                                             },
+                                                                             {
+                                                                                 "key":  "memory_types",
+                                                                                 "label":  "Типы памяти",
+                                                                                 "value":  "DDR4",
+                                                                                 "missing":  false
+                                                                             },
+                                                                             {
+                                                                                 "key":  "tdp_w",
+                                                                                 "label":  "TDP",
+                                                                                 "value":  "65 Вт",
+                                                                                 "missing":  false
+                                                                             },
+                                                                             {
+                                                                                 "key":  "integrated_graphics",
+                                                                                 "label":  "Встроенная графика",
+                                                                                 "value":  "нет",
+                                                                                 "missing":  false
+                                                                             }
+                                                                         ],
+                                                       "missing_specs":  [
+
+                                                                         ],
+                                                       "is_data_complete":  true
+                                                   },
+                                          "quantity":  1,
+                                          "price_snapshot":  "9990.00",
+                                          "is_available":  true
+                                      }
+                                  ],
+                        "unavailable_part_ids":  [
+
+                                                 ],
+                        "check":  {
+                                      "is_compatible":  true,
+                                      "is_complete":  false,
+                                      "error_count":  0,
+                                      "warning_count":  0,
+                                      "issues":  [
+
+                                                 ],
+                                      "power":  {
+                                                    "peak_w":  138,
+                                                    "recommended_w":  180,
+                                                    "suggested_psu_w":  300,
+                                                    "base_load_w":  50,
+                                                    "factor":  1.3,
+                                                    "vendor_min_w":  null,
+                                                    "by_category":  {
+                                                                        "cpu":  88
+                                                                    }
+                                                },
+                                      "missing_categories":  [
+                                                                 "motherboard",
+                                                                 "ram",
+                                                                 "storage",
+                                                                 "psu",
+                                                                 "case"
+                                                             ],
+                                      "total_price":  "9990.00",
+                                      "unpriced_part_ids":  [
+
+                                                            ],
+                                      "total_price_display":  "9 990 ₽",
+                                      "total_price_is_estimate":  false,
+                                      "total_price_note":  null,
+                                      "unpriced_count":  0
+                                  },
+                        "total_price_display":  "9 990 ₽",
+                        "total_price_is_estimate":  false,
+                        "total_price_note":  null,
+                        "unpriced_count":  0,
+                        "total_price":  "9990.00",
+                        "is_owner":  true
+                    },
+    "GET builds":  {
+                       "items":  [
+                                     {
+                                         "id":  "f64660e9-64a9-4dac-b15e-734bf9d8b9c5",
+                                         "name":  "Проверка API",
+                                         "is_public":  false,
+                                         "share_slug":  null,
+                                         "total_price":  "9990.00",
+                                         "total_price_display":  "9 990 ₽",
+                                         "total_power_w":  138,
+                                         "item_count":  1,
+                                         "updated_at":  "2026-10-25T11:32:49.006178+00:00"
+                                     }
+                                 ],
+                       "count":  1,
+                       "limit":  15
+                   },
+    "PUT builds/{id}":  {
+                            "id":  "f64660e9-64a9-4dac-b15e-734bf9d8b9c5",
+                            "name":  "Проверка API 2",
+                            "description":  null,
+                            "is_public":  false,
+                            "share_slug":  null,
+                            "share_path":  null,
+                            "created_at":  "2026-10-25T11:32:49.006178+00:00",
+                            "updated_at":  "2026-10-25T11:32:49.063211+00:00",
+                            "items":  [
+                                          {
+                                              "part":  {
+                                                           "id":  3,
+                                                           "category":  "cpu",
+                                                           "name":  "AMD Ryzen 5 5600",
+                                                           "manufacturer":  "AMD",
+                                                           "manufacturer_display":  "AMD",
+                                                           "source":  "seed",
+                                                           "price":  "9990.00",
+                                                           "currency":  "RUB",
+                                                           "has_price":  true,
+                                                           "price_display":  "9 990 ₽",
+                                                           "price_is_estimate":  false,
+                                                           "price_note":  null,
+                                                           "price_updated_at":  "2026-10-17T11:44:22.092500+00:00",
+                                                           "power_w":  88,
+                                                           "power_display":  "88 Вт",
+                                                           "specs":  {
+                                                                         "tdp_w":  65,
+                                                                         "socket":  "AM4",
+                                                                         "memory_types":  [
+                                                                                              "DDR4"
+                                                                                          ],
+                                                                         "integrated_graphics":  false
+                                                                     },
+                                                           "specs_display":  [
+                                                                                 {
+                                                                                     "key":  "socket",
+                                                                                     "label":  "Сокет",
+                                                                                     "value":  "AM4",
+                                                                                     "missing":  false
+                                                                                 },
+                                                                                 {
+                                                                                     "key":  "memory_types",
+                                                                                     "label":  "Типы памяти",
+                                                                                     "value":  "DDR4",
+                                                                                     "missing":  false
+                                                                                 },
+                                                                                 {
+                                                                                     "key":  "tdp_w",
+                                                                                     "label":  "TDP",
+                                                                                     "value":  "65 Вт",
+                                                                                     "missing":  false
+                                                                                 },
+                                                                                 {
+                                                                                     "key":  "integrated_graphics",
+                                                                                     "label":  "Встроенная графика",
+                                                                                     "value":  "нет",
+                                                                                     "missing":  false
+                                                                                 }
+                                                                             ],
+                                                           "missing_specs":  [
+
+                                                                             ],
+                                                           "is_data_complete":  true
+                                                       },
+                                              "quantity":  1,
+                                              "price_snapshot":  "9990.00",
+                                              "is_available":  true
+                                          }
+                                      ],
+                            "unavailable_part_ids":  [
+
+                                                     ],
+                            "check":  {
+                                          "is_compatible":  true,
+                                          "is_complete":  false,
+                                          "error_count":  0,
+                                          "warning_count":  0,
+                                          "issues":  [
+
+                                                     ],
+                                          "power":  {
+                                                        "peak_w":  138,
+                                                        "recommended_w":  180,
+                                                        "suggested_psu_w":  300,
+                                                        "base_load_w":  50,
+                                                        "factor":  1.3,
+                                                        "vendor_min_w":  null,
+                                                        "by_category":  {
+                                                                            "cpu":  88
+                                                                        }
+                                                    },
+                                          "missing_categories":  [
+                                                                     "motherboard",
+                                                                     "ram",
+                                                                     "storage",
+                                                                     "psu",
+                                                                     "case"
+                                                                 ],
+                                          "total_price":  "9990.00",
+                                          "unpriced_part_ids":  [
+
+                                                                ],
+                                          "total_price_display":  "9 990 ₽",
+                                          "total_price_is_estimate":  false,
+                                          "total_price_note":  null,
+                                          "unpriced_count":  0
+                                      },
+                            "total_price_display":  "9 990 ₽",
+                            "total_price_is_estimate":  false,
+                            "total_price_note":  null,
+                            "unpriced_count":  0,
+                            "total_price":  "9990.00",
+                            "is_owner":  true
+                        },
+    "POST share":  {
+                       "share_slug":  "DELXStDUHexD",
+                       "share_path":  "/b/DELXStDUHexD",
+                       "api_path":  "/api/v1/shared/DELXStDUHexD"
+                   },
+    "GET shared/{slug}":  {
+                              "id":  "f64660e9-64a9-4dac-b15e-734bf9d8b9c5",
+                              "name":  "Проверка API 2",
+                              "description":  null,
+                              "is_public":  true,
+                              "share_slug":  "DELXStDUHexD",
+                              "share_path":  "/b/DELXStDUHexD",
+                              "created_at":  "2026-10-25T11:32:49.006178+00:00",
+                              "updated_at":  "2026-10-25T11:32:49.095844+00:00",
+                              "items":  [
+                                            {
+                                                "part":  {
+                                                             "id":  3,
+                                                             "category":  "cpu",
+                                                             "name":  "AMD Ryzen 5 5600",
+                                                             "manufacturer":  "AMD",
+                                                             "manufacturer_display":  "AMD",
+                                                             "source":  "seed",
+                                                             "price":  "9990.00",
+                                                             "currency":  "RUB",
+                                                             "has_price":  true,
+                                                             "price_display":  "9 990 ₽",
+                                                             "price_is_estimate":  false,
+                                                             "price_note":  null,
+                                                             "price_updated_at":  "2026-10-17T11:44:22.092500+00:00",
+                                                             "power_w":  88,
+                                                             "power_display":  "88 Вт",
+                                                             "specs":  {
+                                                                           "tdp_w":  65,
+                                                                           "socket":  "AM4",
+                                                                           "memory_types":  [
+                                                                                                "DDR4"
+                                                                                            ],
+                                                                           "integrated_graphics":  false
+                                                                       },
+                                                             "specs_display":  [
+                                                                                   {
+                                                                                       "key":  "socket",
+                                                                                       "label":  "Сокет",
+                                                                                       "value":  "AM4",
+                                                                                       "missing":  false
+                                                                                   },
+                                                                                   {
+                                                                                       "key":  "memory_types",
+                                                                                       "label":  "Типы памяти",
+                                                                                       "value":  "DDR4",
+                                                                                       "missing":  false
+                                                                                   },
+                                                                                   {
+                                                                                       "key":  "tdp_w",
+                                                                                       "label":  "TDP",
+                                                                                       "value":  "65 Вт",
+                                                                                       "missing":  false
+                                                                                   },
+                                                                                   {
+                                                                                       "key":  "integrated_graphics",
+                                                                                       "label":  "Встроенная графика",
+                                                                                       "value":  "нет",
+                                                                                       "missing":  false
+                                                                                   }
+                                                                               ],
+                                                             "missing_specs":  [
+
+                                                                               ],
+                                                             "is_data_complete":  true
+                                                         },
+                                                "quantity":  1,
+                                                "price_snapshot":  "9990.00",
+                                                "is_available":  true
+                                            }
+                                        ],
+                              "unavailable_part_ids":  [
+
+                                                       ],
+                              "check":  {
+                                            "is_compatible":  true,
+                                            "is_complete":  false,
+                                            "error_count":  0,
+                                            "warning_count":  0,
+                                            "issues":  [
+
+                                                       ],
+                                            "power":  {
+                                                          "peak_w":  138,
+                                                          "recommended_w":  180,
+                                                          "suggested_psu_w":  300,
+                                                          "base_load_w":  50,
+                                                          "factor":  1.3,
+                                                          "vendor_min_w":  null,
+                                                          "by_category":  {
+                                                                              "cpu":  88
+                                                                          }
+                                                      },
+                                            "missing_categories":  [
+                                                                       "motherboard",
+                                                                       "ram",
+                                                                       "storage",
+                                                                       "psu",
+                                                                       "case"
+                                                                   ],
+                                            "total_price":  "9990.00",
+                                            "unpriced_part_ids":  [
+
+                                                                  ],
+                                            "total_price_display":  "9 990 ₽",
+                                            "total_price_is_estimate":  false,
+                                            "total_price_note":  null,
+                                            "unpriced_count":  0
+                                        },
+                              "total_price_display":  "9 990 ₽",
+                              "total_price_is_estimate":  false,
+                              "total_price_note":  null,
+                              "unpriced_count":  0,
+                              "total_price":  "9990.00",
+                              "is_owner":  false
+                          },
+    "DELETE share":  {
+
+                     },
+    "DELETE build":  {
+
+                     }
+}

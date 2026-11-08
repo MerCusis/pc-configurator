@@ -23,9 +23,10 @@ async def session_rate_limit(request: Request) -> None:
     ip = request.client.host if request.client else "unknown"
     key = f"rl:session:{ip}"
     try:
-        count = await redis_client.incr(key)
-        if count == 1:
-            await redis_client.expire(key, 3600)
+        async with redisclient.pipeline(transaction=True) as pipe:
+            pipe.set(key, 0, ex=3600, nx=True)
+            pipe.incr(key)
+            _, count = await pipe.execute()
     except Exception:  # noqa: BLE001
         logger.warning("Rate limit skipped: Redis unavailable", exc_info=True)
         return

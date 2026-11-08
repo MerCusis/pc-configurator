@@ -1,4 +1,4 @@
-"""Дополнение OpenAPI-схемы: Bearer-авторизация для Swagger и адреса серверов.
+﻿"""Дополнение OpenAPI-схемы: Bearer-авторизация для Swagger и адреса серверов.
 
 Подключение в app/main.py сразу после создания app:
     from app.openapi_patch import install_openapi
@@ -8,7 +8,6 @@
 import os
 from fastapi import FastAPI
 from fastapi.openapi.utils import get_openapi
-from app.openapi_patch import install_openapi
 
 SCHEME = "AnonToken"
 
@@ -45,4 +44,3 @@ def install_openapi(app: FastAPI) -> None:
         return schema
 
     app.openapi = custom_openapi
-    install_openapi(app)

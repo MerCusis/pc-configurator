@@ -137,6 +137,7 @@ async def _save(db: AsyncSession, build: Build, data: BuildIn) -> None:
     all_unpriced = bool(items) and len(result.unpriced_part_ids) >= len(items)
     build.total_price = None if all_unpriced else result.total_price
     build.total_power_w = result.power.peak_w
+    build.updated_at = func.now()
     await db.flush()
     await db.execute(delete(BuildItem).where(BuildItem.build_id == build.id))
     db.add_all(BuildItem(build_id=build.id, part_id=pid, quantity=qty, price_snapshot=prices.get(pid))

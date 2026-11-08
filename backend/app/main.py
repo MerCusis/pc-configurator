@@ -1,4 +1,4 @@
-"""Точка входа FastAPI."""
+﻿"""Точка входа FastAPI."""
 import asyncio
 from collections.abc import AsyncIterator
 from contextlib import asynccontextmanager
@@ -12,7 +12,7 @@ from app.config import get_settings
 from app.database import check_db, engine
 from app.redis_client import check_redis, redis_client
 
-from app.openapi_patch import apply_openapi_patch
+from app.openapi_patch import install_openapi
 
 settings = get_settings()
 API = settings.api_prefix
@@ -65,4 +65,4 @@ async def readiness() -> JSONResponse:
 for _router in (sessions.router, catalog.router, builds.router):
     app.include_router(_router, prefix=API)
 
-apply_openapi_patch(app)
+install_openapi(app)

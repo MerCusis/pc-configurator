@@ -22,10 +22,10 @@ function Prop($obj, [string]$pattern) {
     $p = $obj.PSObject.Properties | Where-Object { $_.Name -match $pattern } | Select-Object -First 1
     if ($p) { return $p.Value } else { return $null }
 }
-function Body($o) { return [Text.Encoding]::UTF8.GetBytes(($o | ConvertTo-Json -Depth 6)) }
+function Body($o) { return ,[Text.Encoding]::UTF8.GetBytes((ConvertTo-Json $o -Depth 10 -Compress)) }
 $ct = "application/json; charset=utf-8"
 
-$spec = Step "openapi.json" { Invoke-RestMethod "$BaseUrl/openapi.json" }
+$spec = Step "openapi.json" { Invoke-RestMethod "$api/openapi.json" }
 if ($spec -and -not $spec.components.securitySchemes) {
     Write-Host "[FAIL] в openapi.json нет securitySchemes: openapi_patch не подключён" -ForegroundColor Red; $script:fail++
 }

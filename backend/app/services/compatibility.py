@@ -241,9 +241,15 @@ def _case_form_factors(ctx: _Context, params: Params) -> Iterator[_Violation]:
     if psu:
         ff, allowed = _str(psu, "form_factor"), _list(case, "psu_form_factors")
         if not _in(ff, allowed):
-            yield _hard("case_psu_form_factor",
-                        f"Корпус {case.name} рассчитан на БП {', '.join(allowed)}, а {psu.name} — {ff}.",
-                        psu, case, form_factor=ff, supported=allowed)
+            if _in(ff, ["SFX", "SFX-L"]) and _in("ATX", allowed):
+                yield _soft("case_psu_sfx_adapter",
+                            f"{psu.name} формата {ff} встанет в корпус {case.name} под ATX только через "
+                            f"переходную рамку SFX→ATX. Проверьте, есть ли она в комплекте БП.",
+                            psu, case)
+            else:
+                yield _hard("case_psu_form_factor",
+                            f"Корпус {case.name} рассчитан на БП {', '.join(allowed)}, а {psu.name} — {ff}.",
+                            psu, case, form_factor=ff, supported=allowed)
 
 
 def _clearance(code: str, part: BuildPart, case: BuildPart, size: float, limit: float,
