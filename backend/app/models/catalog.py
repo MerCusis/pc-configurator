@@ -8,7 +8,7 @@ from sqlalchemy import (
     Numeric, SmallInteger, String, UniqueConstraint, false, func, text, true,
 )
 from sqlalchemy.dialects.postgresql import JSONB, TSVECTOR
-from sqlalchemy.orm import Mapped, mapped_column
+from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 from app.models.base import Base, TimestampMixin
 
@@ -29,6 +29,8 @@ class Category(Base):
     is_required: Mapped[bool] = mapped_column(server_default=false())
     # Сколько позиций категории может быть в одной сборке (RAM, накопители > 1)
     max_items: Mapped[int] = mapped_column(SmallInteger, server_default=text("1"))
+    def __str__(self) -> str:
+        return self.name
 
 
 class Manufacturer(Base):
@@ -38,6 +40,8 @@ class Manufacturer(Base):
     id: Mapped[int] = mapped_column(Integer, Identity(), primary_key=True)
     slug: Mapped[str] = mapped_column(String(64), unique=True)
     name: Mapped[str] = mapped_column(String(64))
+    def __str__(self) -> str:
+        return self.name
 
 
 class Part(TimestampMixin, Base):
@@ -63,6 +67,10 @@ class Part(TimestampMixin, Base):
     manufacturer_id: Mapped[int | None] = mapped_column(
         ForeignKey("manufacturers.id", ondelete="RESTRICT"), index=True
     )
+    def __str__(self) -> str:
+        return self.name    # Нужны админке для выпадающих списков. raise_on_sql: случайное обращение в API даст понятную ошибку
+    category: Mapped["Category"] = relationship(lazy="raise_on_sql")
+    manufacturer: Mapped["Manufacturer | None"] = relationship(lazy="raise_on_sql")
     name: Mapped[str] = mapped_column(String(255))
     # Откуда пришла позиция: seed, manual, имя файла импорта и т.п.
     source: Mapped[str] = mapped_column(String(32), server_default=text("'manual'"))

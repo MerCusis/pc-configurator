@@ -1,4 +1,4 @@
-.env
+﻿.env
 __pycache__/
 *.py[cod]
 .venv/
@@ -7,3 +7,5 @@ __pycache__/
 *.pdf
 .idea/
 .vscode/
+*.dump
+backend/data/

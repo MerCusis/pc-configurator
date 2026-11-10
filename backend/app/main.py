@@ -12,7 +12,7 @@ from app.config import get_settings
 from app.database import check_db, engine
 from app.redis_client import check_redis, redis_client
 
-from app.openapi_patch import install_openapi
+from app.admin_panel import setup_admin
 
 settings = get_settings()
 API = settings.api_prefix
@@ -65,4 +65,4 @@ async def readiness() -> JSONResponse:
 for _router in (sessions.router, catalog.router, builds.router):
     app.include_router(_router, prefix=API)
 
-install_openapi(app)
+setup_admin(app)

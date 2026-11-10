@@ -1,0 +1,33 @@
+{% extends "sqladmin/layout.html" %}
+{% block content %}
+<div class="card">
+  <div class="card-header"><h3 class="card-title">Импорт базы деталей</h3></div>
+  <div class="card-body">
+    {% if stats %}
+    <div class="alert alert-success">
+      {% if dry_run %}<b>Проверка прошла, в базе ничего не изменилось.</b><br>{% else %}<b>Импорт выполнен.</b><br>{% endif %}
+      Новых деталей: {{ stats.created }}, обновлено: {{ stats.updated }}, без изменений: {{ stats.unchanged }},
+      снято с продажи: {{ stats.deactivated }}, новых производителей: {{ stats.manufacturers }}.
+    </div>
+    {% endif %}
+    {% if errors %}
+    <div class="alert alert-danger">
+      <b>База не изменена. Ошибок: {{ errors_total }}{% if errors_total > errors|length %}, показаны первые {{ errors|length }}{% endif %}.</b>
+      <ul class="mb-0">{% for e in errors %}<li>{{ e }}</li>{% endfor %}</ul>
+    </div>
+    {% endif %}
+    <form method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept=".json,application/json" class="form-control mb-3" required>
+      <label class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" name="deactivate_missing" checked>
+        <span class="form-check-label">Снять с продажи детали, которых нет в файле</span>
+      </label>
+      <label class="form-check mb-3">
+        <input class="form-check-input" type="checkbox" name="dry_run">
+        <span class="form-check-label">Только проверить, ничего не сохранять</span>
+      </label>
+      <button class="btn btn-primary" type="submit" onclick="this.disabled=true;this.innerText='Загружаю...';this.form.submit();">Загрузить</button>
+    </form>
+  </div>
+</div>
+{% endblock %}
