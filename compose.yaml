@@ -93,4 +93,4 @@ services:
 volumes:
   pgdata:
   redisdata:
-  caddy_data
+  caddy_data:
