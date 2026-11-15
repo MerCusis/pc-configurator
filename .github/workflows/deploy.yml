@@ -1,0 +1,18 @@
+name: Deploy
+on:
+  push:
+    branches: [main]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /opt/pc-configurator
+            git pull --ff-only
+            docker run --rm -v "$PWD/frontend":/app -w /app node:20 sh -c "npm ci && npm run build"
+            docker compose up -d --build
